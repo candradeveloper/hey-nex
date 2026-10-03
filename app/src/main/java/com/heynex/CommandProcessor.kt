@@ -23,8 +23,9 @@ import android.provider.Settings
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.WindowManager
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -349,7 +350,7 @@ class CommandProcessor(
             return
         }
         val client = GroqApiClient(apiKey)
-        kotlinx.coroutines.GlobalScope.launch(kotlinx.coroutines.Dispatchers.Main) {
+        GlobalScope.launch(kotlinx.coroutines.Dispatchers.Main) {
             val result = client.ask(command)
             result.onSuccess { answer ->
                 speak(answer)
