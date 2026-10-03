@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Groq API">
+        <EditTextPreference
+            android:key="groq_api_key"
+            android:title="Kunci API Groq"
+            android:summary="Simpan kunci API Groq Anda"
+            android:dialogTitle="Masukkan kunci API Groq" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Suara dan Kepekaan">
+        <SeekBarPreference
+            android:key="wake_word_sensitivity"
+            android:title="Kepekaan Wake Word"
+            android:summary="Sesuaikan kepekaan deteksi 'Hey Nex'"
+            android:max="100"
+            android:defaultValue="50" />
+
+        <SeekBarPreference
+            android:key="voice_speed"
+            android:title="Kecepatan Suara"
+            android:summary="Sesuaikan kecepatan text-to-speech"
+            android:max="200"
+            android:defaultValue="100" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

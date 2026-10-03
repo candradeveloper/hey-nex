@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_dark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_inactive"
+        android:textColor="@color/accent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <Button
+            android:id="@+id/buttonStartService"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_assistant" />
+
+        <Button
+            android:id="@+id/buttonStopService"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="@string/stop_assistant" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/buttonGrantOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grant_overlay"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/buttonNotificationAccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grant_notification_access"
+        android:paddingBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recent_commands"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:paddingBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCommandHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/**/build
+
+# Local configuration
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+.cxx/
+.externalNativeBuild
+
+# OS
+.DS_Store
+Thumbs.db
+
+# APK artifacts
+*.apk
+*.ap_
+*.aab
